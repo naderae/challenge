@@ -1,0 +1,70 @@
+
+body{
+  width: 100%;
+}
+
+.navbar_all{
+  /* background-color: #333; */
+  width: 50%;
+  /* background: black; */
+
+}
+
+.dropdown {
+  /* overflow: hidden; */
+  /* background-color: #333; */
+  /* font-family: Arial; */
+  display: inline-block;
+  vertical-align: top;
+  color: red;
+  width: 32%;
+}
+
+.dropbtn{
+text-align: justify;
+
+}
+
+select{
+  width: 100%;
+  /* margin: auto; */
+  margin: 0;
+  padding: 0;
+  border-color: blue;
+}
+
+select[multiple] {
+  /* background:none; */
+  /* width:auto; */
+  /* height:auto; */
+  /* padding:0;
+  margin:0; */
+  /* border-width: 2px; */
+  /* border-style: inset; */
+  /* -moz-appearance: menulist; */
+  -webkit-appearance: menulist;
+  appearance: menulist;
+}
+
+.all_subcategories{
+  display: none;
+}
+
+.all_brands{
+  /* display: none; */
+}
+
+@media screen and (max-width: 1079px) {
+  .navbar_all{
+    display: none;
+  }
+}
+
+.button{
+  color: white;
+  background-color: red;
+  border-radius: 10px;
+  width: 20%;
+  height: 20px;
+
+}
