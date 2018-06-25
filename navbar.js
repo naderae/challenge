@@ -5,6 +5,7 @@ $(document).ready(function() {
   var rand1 = Math.floor(Math.random() *10);
   var rand2 = Math.floor(Math.random() *10);
 
+
   var option1 = document.createElement("option");
   option1.value = rand1;
   option1.text = "category " + rand1.toString();
@@ -22,13 +23,15 @@ $(document).ready(function() {
 
 
     $('#categories').change(function(){
-      $('.all_subcategories').css("display","inline-block");
+
+      // $('.all_subcategories').css("display","inline-block");
       $('#subcategories').empty();
       // var option = document.createElement("option");
       $('#subcategories').append('<option select=selected>All SubCategories</option>')
 
 
       var selected_option = $('#categories').find(":selected").text();
+      console.log(selected_option);
       var cats = document.getElementById("categories").options;
 
       let option;
@@ -36,7 +39,9 @@ $(document).ready(function() {
 
 
       if (selected_option == "All Categories") {
-
+        //
+        $('.all_subcategories').hide();
+        // $('#all_subcategories').css( "display", "none" );
         for (var i = 1; i < cats.length; i++) {
           // console.log(cats[i].text);
           option = document.createElement("option");
@@ -49,7 +54,7 @@ $(document).ready(function() {
       }
 
       } else {
-
+      $('.all_subcategories').css("display","inline-block");
       var option3 = document.createElement("option");
       option3.text = rand1 + " " + "(" + selected_option + ")";
       dropdown_sub.appendChild(option3);
@@ -103,6 +108,9 @@ $(document).ready(function() {
 
   });
 });
+
+
+
 
 
 function apply(){
