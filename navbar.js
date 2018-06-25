@@ -72,7 +72,7 @@ $(document).ready(function() {
       $('.all_brands').css("display","inline-block");
       $('#brands').empty();
 
-      $('#brands').append('<option select=selected>All Brands</option>')
+      $('#brands').append('<option value=allbrands select=selected>All Brands</option>')
 
       var selected_option = $('#subcategories').find(":selected").text();
       var sub_cats = document.getElementById("subcategories").options;
@@ -124,12 +124,14 @@ function apply(){
 
 function reset(){
   var sub_cats = document.getElementById("subcategories").options;
+  console.log(sub_cats);
   var all_brands = document.getElementById("brands").options;
-
+  console.log(all_brands);
 
   if (sub_cats.length > 1 && all_brands.length > 1) {
     $('#categories').val('All Categories');
     $('.all_subcategories').css("display","none");
-    $('#brands').val([])
+    // $('#brands').val([])
+    $('#brands').children('option[value!="allbrands"]').hide();
   }
 }
